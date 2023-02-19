@@ -1,9 +1,12 @@
 import { promises } from "fs";
 import { dirname, isAbsolute, join } from "path";
+import { fileURLToPath } from "url";
 
 export class FilesService {
   getFilePath(path: string, filename: string, extension: string) {
     if (!isAbsolute(path)) {
+      const __filename = fileURLToPath(import.meta.url);
+      const __dirname = dirname(__filename);
       path = join(__dirname, path);
     }
 
