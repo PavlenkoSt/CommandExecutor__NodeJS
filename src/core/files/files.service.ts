@@ -3,11 +3,11 @@ import { dirname, isAbsolute, join } from "path";
 
 export class FilesService {
   getFilePath(path: string, filename: string, extension: string) {
-    if (isAbsolute(path)) {
-      path = join(dirname(path), path);
+    if (!isAbsolute(path)) {
+      path = join(__dirname, path);
     }
 
-    return join(path, `${filename}.${extension}`);
+    return join(dirname(path), `${filename}.${extension}`);
   }
 
   async isExist(path: string) {
