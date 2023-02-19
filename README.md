@@ -2,4 +2,4 @@
 
 Install ffmpeg app from https://ffmpeg.org/download.html
 
-For macOS just run command `brew ffmpeg`
+For macOS just run command `brew install ffmpeg`
