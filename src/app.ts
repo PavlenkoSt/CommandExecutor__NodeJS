@@ -1,5 +1,5 @@
-import { FfmpegExecutor } from "commands/ffmpeg/ffmpeg.executor";
-import { ConsoleLogger } from "out/console-logger/console-logger";
+import { FfmpegExecutor } from "./commands/ffmpeg/ffmpeg.executor.js";
+import { ConsoleLogger } from "./out/console-logger/console-logger.js";
 
 class App {
   async run() {

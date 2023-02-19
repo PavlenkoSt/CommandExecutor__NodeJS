@@ -1,10 +1,10 @@
 import { promises } from "fs";
-import { isAbsolute, join } from "path";
+import { dirname, isAbsolute, join } from "path";
 
 export class FilesService {
   getFilePath(path: string, filename: string, extension: string) {
     if (isAbsolute(path)) {
-      path = join(__dirname, path);
+      path = join(dirname(path), path);
     }
 
     return join(path, `${filename}.${extension}`);

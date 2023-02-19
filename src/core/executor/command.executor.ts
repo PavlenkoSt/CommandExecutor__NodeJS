@@ -1,7 +1,7 @@
 import { ChildProcessWithoutNullStreams } from "child_process";
 
-import { ICommand } from "core/executor/command.types";
-import { IStreamLogger } from "core/handlers/stream-logger.interface";
+import { IStreamLogger } from "../handlers/stream-logger.interface.js";
+import { ICommand } from "./command.types.js";
 
 export abstract class CommandExecutor<Input> {
   constructor(private logger: IStreamLogger) {}
