@@ -30,6 +30,7 @@ export class FfmpegExecutor extends CommandExecutor<IFfmpegCommandInput> {
       path,
     };
   }
+
   protected build({
     width,
     height,
@@ -49,6 +50,7 @@ export class FfmpegExecutor extends CommandExecutor<IFfmpegCommandInput> {
       output,
     };
   }
+
   protected spawn({
     args,
     command,
@@ -57,6 +59,7 @@ export class FfmpegExecutor extends CommandExecutor<IFfmpegCommandInput> {
     this.fileService.removeIfExist(output);
     return spawn(command, args);
   }
+
   protected processStream(
     process: ChildProcessWithoutNullStreams,
     logger: IStreamLogger
